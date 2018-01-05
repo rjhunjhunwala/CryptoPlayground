@@ -20,12 +20,11 @@ public class CryptoPlayground {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) throws NoSuchAlgorithmException {
-		String toHash = "Hello, World";
+		String toHash = "Hello, World!";
 		MessageDigest hash = java.security.MessageDigest.getInstance("SHA-512");
  byte[] stuff = hash.digest(toHash.getBytes(StandardCharsets.UTF_8));
 System.out.println(Arrays.toString(stuff));
 	for(byte b:stuff){
-		int z = b +128;
 	int a = (b&15<<4)>>4;
 	int c = (b&15);
 String m = "0123456789abcdef";	
